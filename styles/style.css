@@ -161,6 +161,11 @@ body {
     padding-bottom: 7px;
 }
 
+.escola-card-imagem{
+    flex-shrink: 1;
+    max-width: 380px;
+}
+
 .escola-card-subtitulo {
     font-weight: 400;
 }
@@ -203,6 +208,10 @@ body {
 
     .escola-card {
         width: 300px;
+    }
+
+    .escola-card-imagem{
+        width: 100%;
     }
 }
 
@@ -256,6 +265,11 @@ body {
     }
 
     .escola-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .escola-card-imagem{
         width: 100%;
         max-width: 350px;
     }
