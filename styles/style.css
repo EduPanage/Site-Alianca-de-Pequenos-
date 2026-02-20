@@ -54,6 +54,10 @@ body {
     text-decoration: none;
 }
 
+.navbar-item:hover {
+        color: rgb(22, 126, 182);
+        font-size: 17px;
+    }
 
 /* FORJA APRESENTACAO */
 
@@ -98,6 +102,11 @@ body {
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
+}
+
+.apresentacao-forja-botao:hover{
+    background-color: rgb(250, 0, 0);
+    
 }
 
 .apresentacao-imagem {
@@ -161,7 +170,7 @@ body {
     padding-bottom: 7px;
 }
 
-.escola-card-imagem{
+.escola-card-imagem {
     flex-shrink: 1;
     max-width: 380px;
 }
@@ -210,9 +219,15 @@ body {
         width: 300px;
     }
 
-    .escola-card-imagem{
+    .escola-card-imagem {
         width: 100%;
     }
+
+    .navbar-item:hover {
+        color: rgb(22, 126, 182);
+        font-size: 17px;
+    }
+
 }
 
 /* CELULAR */
@@ -220,7 +235,7 @@ body {
 @media (max-width: 768px) {
 
     .navbar-container {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
         height: auto;
         padding: 1rem;
@@ -269,8 +284,13 @@ body {
         max-width: 350px;
     }
 
-    .escola-card-imagem{
+    .escola-card-imagem {
         width: 100%;
         max-width: 350px;
+    }
+
+    .navbar-item:hover {
+        color: rgb(22, 126, 182);
+        font-size: 17px;
     }
 }
