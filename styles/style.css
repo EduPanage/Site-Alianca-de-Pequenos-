@@ -1,4 +1,6 @@
-/* Estilos Gerais */
+/* =========================
+   RESET E CONFIGURAÇÕES
+========================= */
 
 * {
     padding: 0;
@@ -7,11 +9,40 @@
 }
 
 body {
+    width: 100%;
+    max-width: 1800px;
     font-family: 'Montserrat', sans-serif;
+    background-color: var(--cor-texto-claro);
+    color: var(--cor-texto-escuro);
 }
 
+/* =========================
+   VARIÁVEIS
+========================= */
 
-/* NAVBAR */
+:root {
+
+    /* 🎨 Cores principais */
+    --cor-primaria: #0F3057;
+    --cor-secundaria: #145374;
+    --cor-destaque: #9E2A2B;
+    --cor-destaque-hover: #7A1F20;
+
+    /* 🎨 Neutros */
+    --cor-texto-escuro: #1B1B1B;
+    --cor-texto-claro: #F5F5F5;
+
+    /* 📏 Espaçamentos */
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+
+    --radius: 6px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
 
 .header {
     width: 100%;
@@ -19,7 +50,7 @@ body {
 }
 
 .navbar {
-    background-color: #222;
+    background-color: var(--cor-primaria);
     width: 100%;
     height: 100%;
 }
@@ -36,164 +67,242 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0 6%;
+    gap: 60px;
 }
 
 .navbar-menu {
     display: flex;
-    flex-direction: row;
     list-style: none;
     gap: 25px;
 }
 
 .navbar-item {
-    color: #ffff;
+    color: var(--cor-texto-claro);
     text-decoration: none;
+    transition: 0.3s ease;
 }
 
 .navbar-item:hover {
-        color: rgb(22, 126, 182);
-        font-size: 17px;
-    }
+    color: var(--cor-destaque);
+}
 
-/* FORJA APRESENTACAO */
+/* =========================
+   HERO - FORJA
+========================= */
 
 #apresentacao-forja {
     width: 100%;
-    height: 500px;
-    background-image: url("../imgs/forja/background-apresentacao-forja.png");
+    min-height: 500px;
+    background:
+        linear-gradient(rgba(15,48,87,0.85), rgba(20,83,116,0.85)),
+        url("../imgs/forja/background-apresentacao-forja.png");
+    background-size: cover;
+    background-position: center;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 80px;
+    padding: 2rem;
 }
 
 .quero-conhecer {
-
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
     gap: 15px;
 }
 
 .apresentacao-forja-titulo {
-    color: #ffff;
-    font-size: 70px;
+    color: var(--cor-texto-claro);
+    font-size: clamp(3rem, 6vw, 4.5rem);
     letter-spacing: 2px;
-    font-weight: 400;
     font-family: 'Bebas Neue', sans-serif;
 }
 
 .apresentacao-forja-texto {
-    color: #ffff;
-    font-size: 18px;
+    color: var(--cor-texto-claro);
+    font-size: 1rem;
+    max-width: 500px;
 }
 
 .apresentacao-forja-botao {
     width: 10rem;
-    padding: 8px;
-    color: #ffff;
-    background-color: rgb(197, 27, 27);
-    border-radius: 5px;
+    padding: 10px;
+    color: var(--cor-texto-claro);
+    background-color: var(--cor-destaque);
+    border-radius: var(--radius);
     text-decoration: none;
     text-align: center;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(158,42,43,0.4);
 }
 
-.apresentacao-forja-botao:hover{
-    background-color: rgb(250, 0, 0);
-    
-}
-
-.apresentacao-imagem {
-    width: 250px;
+.apresentacao-forja-botao:hover {
+    background-color: var(--cor-destaque-hover);
+    transform: translateY(-2px);
 }
 
 .logo-forja {
     width: 300px;
 }
 
-/* ESCOLA FORJA */
+/* =========================
+   ESCOLA FORJA
+========================= */
 
 #apresentacao-escola-forja {
     width: 100%;
-    height: 720px;
-    background-image: url("../imgs/forja/background-escola-forja.png");
+    padding: 4rem 2rem;
+    background-color: var(--cor-primaria);
+    background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
+    background-size: 20px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    padding-top: 4rem;
     gap: 40px;
 }
 
 .apresentacao-escola-titulo {
-    color: #ffff;
-    font-weight: 400;
-    font-size: 40px;
+    color: var(--cor-texto-claro);
+    font-size: clamp(2rem, 4vw, 2.5rem);
     font-family: 'Bebas Neue', sans-serif;
 }
 
 .apresentacao-escola-texto {
-    color: #ffff;
-    font-size: 18px;
+    color: var(--cor-texto-claro);
     text-align: center;
+    max-width: 700px;
 }
 
 .escola-cards-forja {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-left: 4rem;
-    padding-right: 4rem;
     gap: 25px;
+    flex-wrap: wrap;
 }
 
 .escola-card {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 300px;
-    max-width: 380px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #222;
-    background-color: #222;
-    color: #ffff;
+    flex: 1 1 300px;
+    max-width: 350px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+    border-radius: var(--radius);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
     text-align: center;
-    gap: 7px;
-    padding-bottom: 7px;
+    overflow: hidden;
+}
+
+.escola-card:hover {
+    transform: translateY(-5px);
 }
 
 .escola-card-imagem {
-    flex-shrink: 1;
-    max-width: 380px;
+    width: 100%;
+    display: block;
 }
 
-.escola-card-subtitulo {
-    font-weight: 400;
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    width: 100%;
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.escola-card-texto {
-    font-weight: 200;
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 3rem 6%;
+    flex-wrap: wrap;
 }
 
+.footer-localizacao,
+.footer-social-icons,
+.footer-formulario {
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
-/* RESPONSIVIDADE */
+.footer-social-icons {
+    align-items: center;
+    border-left: 1px solid rgba(255,255,255,0.1);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    padding: 0 2rem;
+}
 
-/* TABLET */
+.footer-lista {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+}
+
+.footer-lista a {
+    color: var(--cor-texto-claro);
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+
+.footer-lista a:hover {
+    color: var(--cor-destaque);
+}
+
+/* FORM */
+
+.footer-formulario input,
+.footer-formulario textarea {
+    padding: 10px;
+    border-radius: var(--radius);
+    border: none;
+    outline: none;
+}
+
+.footer-formulario button {
+    padding: 10px;
+    border-radius: var(--radius);
+    border: none;
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-claro);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.footer-formulario button:hover {
+    background-color: var(--cor-destaque-hover);
+}
+
+/* COPYRIGHT */
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--cor-secundaria);
+    font-size: 0.9rem;
+}
+
+#icons{
+    text-decoration: none;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
 
 @media (max-width: 1024px) {
 
     #apresentacao-forja {
         flex-direction: column;
-        height: auto;
-        padding: 4rem 2rem;
         text-align: center;
     }
 
@@ -201,96 +310,41 @@ body {
         align-items: center;
     }
 
-    .apresentacao-imagem {
-        width: auto;
-    }
-
     .logo-forja {
         width: 220px;
     }
 
-    .escola-cards-forja {
-        flex-wrap: wrap;
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-
-    .escola-card {
-        width: 300px;
-    }
-
-    .escola-card-imagem {
-        width: 100%;
-    }
-
-    .navbar-item:hover {
-        color: rgb(22, 126, 182);
-        font-size: 17px;
-    }
-
 }
-
-/* CELULAR */
 
 @media (max-width: 768px) {
 
     .navbar-container {
-        flex-direction: row;
-        gap: 10px;
-        height: auto;
+        flex-direction: column;
+        gap: 15px;
         padding: 1rem;
     }
 
     .navbar-menu {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 15px;
     }
 
-    .apresentacao-forja-titulo {
-        font-size: 50px;
-    }
-
-    .apresentacao-forja-texto {
-        font-size: 16px;
+    #apresentacao-forja {
+        gap: 40px;
     }
 
     .logo-forja {
         width: 180px;
     }
 
-    #apresentacao-escola-forja {
-        height: auto;
-        padding: 3rem 1.5rem;
-    }
-
-    .apresentacao-escola-titulo {
-        font-size: 32px;
+    .container-footer {
+        flex-direction: column;
         text-align: center;
     }
 
-    .apresentacao-escola-texto {
-        font-size: 16px;
-        padding: 0 1rem;
+    .footer-social-icons {
+        border: none;
+        padding: 1rem 0;
     }
 
-    .escola-cards-forja {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    .escola-card {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .escola-card-imagem {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .navbar-item:hover {
-        color: rgb(22, 126, 182);
-        font-size: 17px;
-    }
 }
