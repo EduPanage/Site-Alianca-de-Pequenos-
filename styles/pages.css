@@ -15,8 +15,8 @@ html {
 body {
     width: 100%;
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--cor-texto-claro);
-    color: var(--cor-texto-escuro);
+    background-color: #F5F5F5;
+    color: #1B1B1B;
     overflow-x: hidden;
 }
 
@@ -32,7 +32,6 @@ body {
 
     --cor-texto-escuro: #1B1B1B;
     --cor-texto-claro: #F5F5F5;
-    --cor-cinza-medio: #e0e0e0;
     --cor-fundo-secao: #f0f4f8;
 
     --spacing-sm: 8px;
@@ -128,97 +127,73 @@ body {
 }
 
 /* =========================
-   HERO - FORJA
+   HERO DAS PÁGINAS INTERNAS
 ========================= */
 
-#apresentacao-forja {
+.page-hero {
     width: 100%;
-    min-height: 500px;
-    background:
-        linear-gradient(rgba(15,48,87,0.85), rgba(20,83,116,0.85)),
-        url("../imgs/forja/background-apresentacao-forja.png");
+    min-height: 300px;
+    background: linear-gradient(rgba(15,48,87,0.88), rgba(20,83,116,0.88)),
+                url("../imgs/forja/background-apresentacao-forja.png");
     background-size: cover;
     background-position: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 12px;
     padding: 4rem 6%;
-}
-
-.quero-conhecer {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.apresentacao-forja-titulo {
-    color: var(--cor-texto-claro);
-    font-size: clamp(3rem, 6vw, 4.5rem);
-    letter-spacing: 2px;
-    font-family: 'Bebas Neue', sans-serif;
-}
-
-.apresentacao-forja-texto {
-    color: var(--cor-texto-claro);
-    font-size: 1rem;
-    max-width: 500px;
-    line-height: 1.7;
-    opacity: 0.9;
-}
-
-.apresentacao-forja-botao {
-    width: 10rem;
-    padding: 12px 10px;
-    color: var(--cor-texto-claro);
-    background-color: var(--cor-destaque);
-    border-radius: var(--radius);
-    text-decoration: none;
     text-align: center;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(158,42,43,0.4);
-    letter-spacing: 0.5px;
 }
 
-.apresentacao-forja-botao:hover {
-    background-color: var(--cor-destaque-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(158,42,43,0.5);
+.page-hero-titulo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--cor-texto-claro);
+    letter-spacing: 3px;
 }
 
-.logo-forja {
-    width: 300px;
-    filter: drop-shadow(0 8px 24px rgba(0,0,0,0.4));
+.page-hero-subtitulo {
+    color: rgba(255,255,255,0.85);
+    font-size: 1rem;
+    max-width: 600px;
+    line-height: 1.7;
 }
 
 /* =========================
-   ESCOLA FORJA
+   SEÇÃO GENÉRICA DE CONTEÚDO
 ========================= */
 
-#apresentacao-escola-forja {
+.page-section {
     width: 100%;
     padding: 5rem 6%;
-    background-color: var(--cor-primaria);
-    background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
-    background-size: 20px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
 }
 
-.apresentacao-escola-titulo {
-    color: var(--cor-texto-claro);
-    font-size: clamp(2rem, 4vw, 2.5rem);
+.page-section.bg-claro {
+    background-color: var(--cor-fundo-secao);
+}
+
+.page-section.bg-escuro {
+    background-color: var(--cor-primaria);
+    background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.section-titulo {
     font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.5rem);
     letter-spacing: 2px;
+    color: var(--cor-primaria);
+    text-align: center;
     position: relative;
     padding-bottom: 12px;
 }
 
-.apresentacao-escola-titulo::after {
+.section-titulo::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -230,12 +205,19 @@ body {
     border-radius: 2px;
 }
 
-.apresentacao-escola-texto {
+.bg-escuro .section-titulo {
     color: var(--cor-texto-claro);
+}
+
+.section-descricao {
     text-align: center;
-    max-width: 700px;
+    max-width: 750px;
     line-height: 1.8;
-    opacity: 0.9;
+    color: #444;
+}
+
+.bg-escuro .section-descricao {
+    color: rgba(255,255,255,0.85);
 }
 
 .palavra-destaque {
@@ -243,108 +225,19 @@ body {
     font-weight: 700;
 }
 
-.escola-cards-forja {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-}
-
-.escola-card {
-    flex: 1 1 280px;
-    max-width: 340px;
-    background-color: var(--cor-secundaria);
-    color: var(--cor-texto-claro);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    overflow: hidden;
-}
-
-.escola-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
-}
-
-.escola-card-imagem {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-    /* Placeholder visual enquanto imagem não é inserida */
-    background: linear-gradient(135deg, #0d2a4a 0%, #1a6a9a 100%);
-}
-
-.escola-card-subtitulo {
-    font-size: 1.2rem;
-    font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 1.5px;
-    margin: 1rem 1rem 0.5rem;
-}
-
-.escola-card-texto {
-    font-size: 0.88rem;
-    line-height: 1.6;
-    padding: 0 1.2rem 1.5rem;
-    opacity: 0.9;
-}
-
 /* =========================
-   CURSOS
+   CARDS GENÉRICOS
 ========================= */
 
-#cursos {
+.cards-grid {
     width: 100%;
-    padding: 5rem 6%;
-    background-color: var(--cor-fundo-secao);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-#cursos h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    color: var(--cor-primaria);
-    letter-spacing: 2px;
-    position: relative;
-    padding-bottom: 12px;
-}
-
-#cursos h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: var(--cor-destaque);
-    border-radius: 2px;
-}
-
-.descricao-cursos {
-    text-align: center;
-    max-width: 750px;
-    line-height: 1.7;
-    color: var(--cor-texto-escuro);
-    margin-bottom: 20px;
-}
-
-.lista-cursos {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 25px;
-    flex-wrap: wrap;
+    max-width: 1200px;
 }
 
-.curso {
-    flex: 1 1 280px;
-    max-width: 360px;
+.card {
     background-color: #fff;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
@@ -354,21 +247,20 @@ body {
     flex-direction: column;
 }
 
-.curso:hover {
+.card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-md);
 }
 
-.curso img {
+.card-imagem {
     width: 100%;
     height: 200px;
     object-fit: cover;
     display: block;
-    /* Placeholder visual enquanto imagem não é inserida */
     background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
 }
 
-.conteudo-curso {
+.card-corpo {
     padding: 1.4rem;
     display: flex;
     flex-direction: column;
@@ -376,21 +268,21 @@ body {
     flex: 1;
 }
 
-.conteudo-curso h3 {
+.card-titulo {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 1.3rem;
     letter-spacing: 1px;
     color: var(--cor-primaria);
 }
 
-.conteudo-curso p {
+.card-texto {
     font-size: 0.88rem;
     line-height: 1.6;
     color: #444;
     flex: 1;
 }
 
-.duracao {
+.card-tag {
     display: inline-block;
     font-size: 0.78rem;
     font-weight: 700;
@@ -398,169 +290,245 @@ body {
     background-color: rgba(158,42,43,0.08);
     padding: 4px 10px;
     border-radius: 20px;
-    letter-spacing: 0.3px;
     width: fit-content;
 }
 
+.card-botao {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 9px 18px;
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-claro);
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    width: fit-content;
+}
+
+.card-botao:hover {
+    background-color: var(--cor-destaque-hover);
+    transform: translateY(-1px);
+}
+
 /* =========================
-   OFICINAS E TREINAMENTOS
+   BLOCO DE TEXTO / SOBRE
 ========================= */
 
-#oficinas-treinamentos {
+.bloco-sobre {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    max-width: 1100px;
+    flex-wrap: wrap;
+}
+
+.bloco-sobre-imagem {
+    flex: 1 1 300px;
+    max-width: 480px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.bloco-sobre-imagem img {
     width: 100%;
-    padding: 5rem 6%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+}
+
+.bloco-sobre-texto {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.bloco-sobre-texto h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.2rem);
+    letter-spacing: 2px;
+    color: var(--cor-primaria);
+}
+
+.bloco-sobre-texto p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* =========================
+   LISTA DE VALORES / MISSÃO
+========================= */
+
+.lista-valores {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1100px;
+}
+
+.valor-item {
+    flex: 1 1 220px;
+    max-width: 280px;
+    text-align: center;
+    padding: 2rem 1.5rem;
     background-color: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+}
+
+.valor-item:hover {
+    transform: translateY(-4px);
+}
+
+.valor-icone {
+    font-size: 2.5rem;
+    color: var(--cor-destaque);
+    margin-bottom: 14px;
+}
+
+.valor-item h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    color: var(--cor-primaria);
+    margin-bottom: 8px;
+}
+
+.valor-item p {
+    font-size: 0.86rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* =========================
+   BANNER CTA
+========================= */
+
+.banner-cta {
+    width: 100%;
+    padding: 4rem 6%;
+    background: linear-gradient(135deg, var(--cor-destaque) 0%, var(--cor-destaque-hover) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    text-align: center;
 }
 
-#oficinas-treinamentos h2 {
+.banner-cta h2 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    color: var(--cor-primaria);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    color: var(--cor-texto-claro);
     letter-spacing: 2px;
-    position: relative;
-    padding-bottom: 12px;
-    text-align: center;
 }
 
-#oficinas-treinamentos h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: var(--cor-destaque);
-    border-radius: 2px;
-}
-
-#oficinas-treinamentos > p {
-    text-align: center;
-    max-width: 750px;
+.banner-cta p {
+    color: rgba(255,255,255,0.9);
+    max-width: 600px;
     line-height: 1.7;
-    color: var(--cor-texto-escuro);
-    margin-bottom: 20px;
 }
 
-.destaque-obs {
+.botao-cta {
+    display: inline-block;
+    padding: 13px 32px;
+    background-color: #fff;
     color: var(--cor-destaque);
-    font-weight: 600;
-    font-size: 0.85rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
 }
 
-.lista-oficinas {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
-    max-width: 1400px;
+.botao-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
 
-.oficina {
-    background-color: var(--cor-fundo-secao);
+/* =========================
+   PIX / APOIO
+========================= */
+
+.apoio-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+}
+
+.apoio-card {
+    flex: 1 1 280px;
+    max-width: 380px;
+    background-color: #fff;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-sm);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 2.5rem;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    border-left: 4px solid var(--cor-destaque);
+    align-items: center;
+    gap: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.oficina:hover {
+.apoio-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
 }
 
-.oficina img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    display: block;
-    /* Placeholder visual enquanto imagem não é inserida */
-    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
-}
-
-.conteudo-oficina {
-    padding: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex: 1;
-}
-
-.conteudo-oficina h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
+.apoio-icone {
+    font-size: 3rem;
     color: var(--cor-primaria);
 }
 
-.conteudo-oficina p {
-    font-size: 0.86rem;
-    line-height: 1.6;
-    color: #444;
-    flex: 1;
-}
-
-/* =========================
-   RESULTADOS / ESTATÍSTICAS
-========================= */
-
-#resultados-estatisticas {
-    width: 100%;
-    padding: 5rem 6%;
-    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
-    background-image:
-        radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px);
-    background-size: 20px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-}
-
-.lista-resultados {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
-}
-
-.resultado {
-    text-align: center;
-    color: var(--cor-texto-claro);
-}
-
-.numero {
+.apoio-card h3 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(3rem, 6vw, 5rem);
-    color: var(--cor-destaque);
-    line-height: 1;
-    display: block;
-    text-shadow: 0 2px 12px rgba(158,42,43,0.5);
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
+    color: var(--cor-primaria);
 }
 
-.resultado p {
+.apoio-card p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.apoio-chave {
     font-size: 0.95rem;
-    line-height: 1.5;
-    opacity: 0.9;
-    margin-top: 8px;
-    font-weight: 600;
+    font-weight: 700;
+    color: var(--cor-destaque);
+    background-color: rgba(158,42,43,0.08);
+    padding: 8px 16px;
+    border-radius: var(--radius);
     letter-spacing: 0.3px;
 }
 
-.cta-resultados {
+.apoio-botao {
+    display: inline-block;
+    padding: 11px 24px;
+    background-color: var(--cor-destaque);
     color: var(--cor-texto-claro);
-    text-align: center;
-    max-width: 680px;
-    line-height: 1.8;
-    opacity: 0.9;
-    font-size: 1rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.apoio-botao:hover {
+    background-color: var(--cor-destaque-hover);
+    transform: translateY(-1px);
 }
 
 /* =========================
@@ -636,8 +604,6 @@ footer {
     transform: translateY(-3px);
 }
 
-/* FORM */
-
 .footer-formulario input,
 .footer-formulario textarea {
     padding: 10px 12px;
@@ -686,8 +652,6 @@ footer {
     transform: translateY(-1px);
 }
 
-/* COPYRIGHT */
-
 .copyright {
     width: 100%;
     text-align: center;
@@ -703,22 +667,13 @@ footer {
 ========================= */
 
 @media (max-width: 1024px) {
-    #apresentacao-forja {
+    .bloco-sobre {
         flex-direction: column;
-        text-align: center;
-        gap: 40px;
+        align-items: flex-start;
     }
 
-    .quero-conhecer {
-        align-items: center;
-    }
-
-    .logo-forja {
-        width: 220px;
-    }
-
-    .lista-resultados {
-        gap: 40px;
+    .bloco-sobre-imagem {
+        max-width: 100%;
     }
 }
 
@@ -739,21 +694,13 @@ footer {
         gap: 12px 18px;
     }
 
-    #apresentacao-forja {
-        gap: 30px;
-        padding: 3rem 5%;
-    }
-
-    .logo-forja {
-        width: 180px;
-    }
-
-    .lista-oficinas {
+    .cards-grid {
         grid-template-columns: 1fr;
     }
 
-    .lista-resultados {
-        gap: 30px;
+    .lista-valores {
+        flex-direction: column;
+        align-items: center;
     }
 
     .container-footer {
@@ -771,24 +718,9 @@ footer {
     .footer-lista {
         justify-content: center;
     }
-}
 
-@media (max-width: 480px) {
-    #cursos,
-    #oficinas-treinamentos,
-    #apresentacao-escola-forja,
-    #resultados-estatisticas {
-        padding: 3.5rem 5%;
-    }
-
-    .lista-cursos,
-    .escola-cards-forja {
+    .apoio-grid {
         flex-direction: column;
         align-items: center;
-    }
-
-    .curso,
-    .escola-card {
-        max-width: 100%;
     }
 }
