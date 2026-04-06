@@ -1,0 +1,856 @@
+/* =========================
+   RESET E CONFIGURAÇÕES
+========================= */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cor-texto-claro);
+    color: var(--cor-texto-escuro);
+    overflow-x: hidden;
+}
+
+/* =========================
+   VARIÁVEIS
+========================= */
+
+:root {
+    --cor-primaria: #0F3057;
+    --cor-secundaria: #145374;
+    --cor-destaque: #9E2A2B;
+    --cor-destaque-hover: #7A1F20;
+
+    --cor-texto-escuro: #1B1B1B;
+    --cor-texto-claro: #F5F5F5;
+    --cor-cinza-medio: #e0e0e0;
+    --cor-fundo-secao: #f0f4f8;
+
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 32px;
+
+    --radius: 6px;
+    --radius-lg: 12px;
+
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.header {
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    background-color: var(--cor-primaria);
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-logo {
+    width: 90px;
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 80px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6%;
+    gap: 60px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.navbar-item {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.navbar-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-destaque);
+    transition: width 0.3s ease;
+}
+
+.navbar-item:hover {
+    color: var(--cor-destaque);
+}
+
+.navbar-item:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   HERO - FORJA
+========================= */
+
+#apresentacao-forja {
+    width: 100%;
+    min-height: 500px;
+    background:
+        linear-gradient(rgba(15, 48, 87, 0.85), rgba(20, 83, 116, 0.85)),
+        url("../imgs/forja/background-apresentacao-forja.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 4rem 6%;
+}
+
+.quero-conhecer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.apresentacao-forja-titulo {
+    color: var(--cor-texto-claro);
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.apresentacao-forja-texto {
+    color: var(--cor-texto-claro);
+    font-size: 1rem;
+    max-width: 500px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.apresentacao-forja-botao {
+    width: 10rem;
+    padding: 12px 10px;
+    color: var(--cor-texto-claro);
+    background-color: var(--cor-destaque);
+    border-radius: var(--radius);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(158, 42, 43, 0.4);
+    letter-spacing: 0.5px;
+}
+
+.apresentacao-forja-botao:hover {
+    background-color: var(--cor-destaque-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(158, 42, 43, 0.5);
+}
+
+.logo-forja {
+    width: 300px;
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.4));
+}
+
+/* =========================
+   ESCOLA FORJA
+========================= */
+
+#apresentacao-escola-forja {
+    width: 100%;
+    padding: 5rem 6%;
+    background-color: var(--cor-primaria);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.apresentacao-escola-titulo {
+    color: var(--cor-texto-claro);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.apresentacao-escola-titulo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--cor-destaque);
+    border-radius: 2px;
+}
+
+.apresentacao-escola-texto {
+    color: var(--cor-texto-claro);
+    text-align: center;
+    max-width: 700px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+.palavra-destaque {
+    color: var(--cor-destaque);
+    font-weight: 700;
+}
+
+.escola-cards-forja {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.escola-card {
+    flex: 1 1 280px;
+    max-width: 340px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-claro);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+}
+
+.escola-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.escola-card-imagem {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    /* Placeholder visual enquanto imagem não é inserida */
+    background: linear-gradient(135deg, #0d2a4a 0%, #1a6a9a 100%);
+}
+
+.escola-card-subtitulo {
+    font-size: 1.2rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1.5px;
+    margin: 1rem 1rem 0.5rem;
+}
+
+.escola-card-texto {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    padding: 0 1.2rem 1.5rem;
+    opacity: 0.9;
+}
+
+/* =========================
+   CURSOS
+========================= */
+
+#cursos {
+    width: 100%;
+    padding: 5rem 6%;
+    background-color: var(--cor-fundo-secao);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#cursos h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: var(--cor-primaria);
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+#cursos h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--cor-destaque);
+    border-radius: 2px;
+}
+
+.descricao-cursos {
+    text-align: center;
+    max-width: 750px;
+    line-height: 1.7;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 20px;
+}
+
+.lista-cursos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.curso {
+    flex: 1 1 280px;
+    max-width: 360px;
+    background-color: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.curso:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.curso img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    /* Placeholder visual enquanto imagem não é inserida */
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+}
+
+.conteudo-curso {
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.conteudo-curso h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    color: var(--cor-primaria);
+}
+
+.conteudo-curso p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #444;
+    flex: 1;
+}
+
+.duracao {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--cor-destaque);
+    background-color: rgba(158, 42, 43, 0.08);
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    width: fit-content;
+}
+
+/* =========================
+   OFICINAS E TREINAMENTOS
+========================= */
+
+#oficinas-treinamentos {
+    width: 100%;
+    padding: 5rem 6%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#oficinas-treinamentos h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: var(--cor-primaria);
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 12px;
+    text-align: center;
+}
+
+#oficinas-treinamentos h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--cor-destaque);
+    border-radius: 2px;
+}
+
+#oficinas-treinamentos>p {
+    text-align: center;
+    max-width: 750px;
+    line-height: 1.7;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 20px;
+}
+
+.destaque-obs {
+    color: var(--cor-destaque);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.lista-oficinas {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1400px;
+}
+
+.oficina {
+    background-color: var(--cor-fundo-secao);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border-left: 4px solid var(--cor-destaque);
+}
+
+.oficina:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.oficina img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    /* Placeholder visual enquanto imagem não é inserida */
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+}
+
+.conteudo-oficina {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.conteudo-oficina h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: var(--cor-primaria);
+}
+
+.conteudo-oficina p {
+    font-size: 0.86rem;
+    line-height: 1.6;
+    color: #444;
+    flex: 1;
+}
+
+/* =========================
+   RESULTADOS / ESTATÍSTICAS
+========================= */
+
+#resultados-estatisticas {
+    width: 100%;
+    padding: 5rem 10%;
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-secundaria) 100%);
+    background-image:
+        radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+    background-size: 20px 20px;
+    gap: 40px;
+}
+
+.lista-resultados {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.resultado {
+    text-align: center;
+    color: var(--cor-texto-claro);
+}
+
+.resultado-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    color: var(--cor-destaque);
+}
+
+.numero {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    color: var(--cor-destaque);
+    line-height: 1;
+    display: block;
+    text-shadow: 0 2px 12px rgba(158, 42, 43, 0.5);
+}
+
+.resultado p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    margin-top: 8px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.cta-resultados {
+    color: var(--cor-texto-escuro);
+    text-align: center;
+    max-width: 100%;
+    line-height: 1.8;
+    opacity: 0.9;
+    font-size: 1rem;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    width: 100%;
+    background-color: #0a2240;
+    color: var(--cor-texto-claro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 3.5rem 6%;
+    flex-wrap: wrap;
+    max-width: 1400px;
+}
+
+.footer-localizacao,
+.footer-social-icons,
+.footer-formulario {
+    flex: 1 1 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-localizacao {}
+
+.footer-localizacao-titulo,
+.footer-social-icons-titulo,
+.footer-formulario-titulo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+    color: var(--cor-destaque);
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.footer-localizacao-texto {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.footer-social-icons {
+    align-items: center;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 2rem;
+}
+
+.footer-lista {
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    gap: 36px;
+}
+
+.footer-lista a {
+    color: var(--cor-texto-claro);
+    font-size: 2.0rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: block;
+    text-decoration: none;
+
+}
+
+.footer-lista a:hover {
+    color: var(--cor-destaque);
+    transform: translateY(-3px);
+}
+
+/* FORM */
+
+.footer-formulario input,
+.footer-formulario textarea {
+    padding: 10px 12px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.07);
+    color: var(--cor-texto-claro);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.88rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.footer-formulario input::placeholder,
+.footer-formulario textarea::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.footer-formulario input:focus,
+.footer-formulario textarea:focus {
+    border-color: var(--cor-destaque);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-formulario textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.footer-formulario button {
+    padding: 11px;
+    border-radius: var(--radius);
+    border: none;
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-claro);
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-formulario button:hover {
+    background-color: var(--cor-destaque-hover);
+    transform: translateY(-1px);
+}
+
+/* COPYRIGHT */
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 0.8rem;
+    opacity: 0.6;
+    letter-spacing: 0.3px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1024px) {
+    #apresentacao-forja {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .quero-conhecer {
+        align-items: center;
+    }
+
+    .logo-forja {
+        width: 220px;
+    }
+
+    .lista-resultados {
+        gap: 40px;
+    }
+
+    .footer-localizacao {
+        max-width: 500px;
+        max-height: 160px;
+    }
+
+    .footer-social-icons {
+        max-width: 500px;
+        max-height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 1rem;
+    }
+
+    .navbar-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    #apresentacao-forja {
+        gap: 30px;
+        padding: 3rem 5%;
+    }
+
+    .logo-forja {
+        width: 180px;
+    }
+
+    .lista-oficinas {
+        grid-template-columns: 1fr;
+    }
+
+    .lista-resultados {
+        gap: 30px;
+    }
+
+    .container-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-social-icons {
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.5rem 0;
+    }
+
+    .footer-lista {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    #cursos,
+    #oficinas-treinamentos,
+    #apresentacao-escola-forja,
+    #resultados-estatisticas {
+        padding: 3.5rem 5%;
+    }
+
+    .lista-cursos,
+    .escola-cards-forja {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .curso,
+    .escola-card {
+        max-width: 100%;
+    }
+
+    .escola-card-subtitulo {
+        font-size: 1rem;
+    }
+
+    .escola-card-texto {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        padding: 0 1.2rem 1.5rem;
+        opacity: 0.9;
+    }
+
+    .escola-card-imagem {
+        height: 180px;
+    }
+
+     .conteudo-curso h3 {
+        font-size: 1.1rem;
+    }   
+
+     .conteudo-curso p {
+        font-size: 0.85rem;
+    }
+
+     .oficina img {
+        height: 140px;
+    }
+
+     .conteudo-oficina h3 {
+        font-size: 1.1rem;
+    }
+
+     .conteudo-oficina p {
+        font-size: 0.85rem;
+    }
+
+     .numero {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+    }
+}
