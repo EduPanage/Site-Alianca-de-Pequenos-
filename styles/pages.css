@@ -41,9 +41,9 @@ body {
     --radius: 6px;
     --radius-lg: 12px;
 
-    --shadow-sm: 0 2px 8px rgba(0,0,0,0.1);
-    --shadow-md: 0 6px 20px rgba(0,0,0,0.15);
-    --shadow-lg: 0 12px 40px rgba(0,0,0,0.2);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
 /* =========================
@@ -62,7 +62,7 @@ body {
     background-color: var(--cor-primaria);
     width: 100%;
     height: 100%;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-logo {
@@ -133,8 +133,8 @@ body {
 .page-hero {
     width: 100%;
     min-height: 300px;
-    background: linear-gradient(rgba(15,48,87,0.88), rgba(20,83,116,0.88)),
-                url("../imgs/forja/background-apresentacao-forja.png");
+    background: linear-gradient(rgba(15, 48, 87, 0.88), rgba(20, 83, 116, 0.88)),
+        url("../imgs/forja/background-apresentacao-forja.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -154,7 +154,7 @@ body {
 }
 
 .page-hero-subtitulo {
-    color: rgba(255,255,255,0.85);
+    color: rgba(255, 255, 255, 0.85);
     font-size: 1rem;
     max-width: 600px;
     line-height: 1.7;
@@ -179,7 +179,7 @@ body {
 
 .page-section.bg-escuro {
     background-color: var(--cor-primaria);
-    background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
     background-size: 20px 20px;
 }
 
@@ -217,7 +217,7 @@ body {
 }
 
 .bg-escuro .section-descricao {
-    color: rgba(255,255,255,0.85);
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .palavra-destaque {
@@ -287,7 +287,7 @@ body {
     font-size: 0.78rem;
     font-weight: 700;
     color: var(--cor-destaque);
-    background-color: rgba(158,42,43,0.08);
+    background-color: rgba(158, 42, 43, 0.08);
     padding: 4px 10px;
     border-radius: 20px;
     width: fit-content;
@@ -326,8 +326,8 @@ body {
 }
 
 .bloco-sobre-imagem {
-    flex: 1 1 300px;
-    max-width: 480px;
+    flex: 1 1 400px;
+    max-width: 400px;
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-md);
@@ -345,21 +345,9 @@ body {
     flex: 1 1 300px;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 36px;
 }
 
-.bloco-sobre-texto h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(1.8rem, 3.5vw, 2.2rem);
-    letter-spacing: 2px;
-    color: var(--cor-primaria);
-}
-
-.bloco-sobre-texto p {
-    font-size: 0.95rem;
-    line-height: 1.8;
-    color: #444;
-}
 
 /* =========================
    LISTA DE VALORES / MISSÃO
@@ -431,7 +419,7 @@ body {
 }
 
 .banner-cta p {
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     max-width: 600px;
     line-height: 1.7;
 }
@@ -446,12 +434,12 @@ body {
     font-weight: 700;
     font-size: 0.95rem;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
 
 .botao-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* =========================
@@ -508,7 +496,7 @@ body {
     font-size: 0.95rem;
     font-weight: 700;
     color: var(--cor-destaque);
-    background-color: rgba(158,42,43,0.08);
+    background-color: rgba(158, 42, 43, 0.08);
     padding: 8px 16px;
     border-radius: var(--radius);
     letter-spacing: 0.3px;
@@ -581,22 +569,24 @@ footer {
 
 .footer-social-icons {
     align-items: center;
-    border-left: 1px solid rgba(255,255,255,0.1);
-    border-right: 1px solid rgba(255,255,255,0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
     padding: 0 2rem;
 }
 
 .footer-lista {
+    margin-top: 20px;
     list-style: none;
     display: flex;
-    gap: 16px;
+    gap: 36px;
 }
 
 .footer-lista a {
     color: var(--cor-texto-claro);
-    font-size: 1.4rem;
+    font-size: 2.0rem;
     transition: color 0.3s ease, transform 0.3s ease;
     display: block;
+    text-decoration: none;
 }
 
 .footer-lista a:hover {
@@ -608,9 +598,9 @@ footer {
 .footer-formulario textarea {
     padding: 10px 12px;
     border-radius: var(--radius);
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     outline: none;
-    background-color: rgba(255,255,255,0.07);
+    background-color: rgba(255, 255, 255, 0.07);
     color: var(--cor-texto-claro);
     font-family: 'Montserrat', sans-serif;
     font-size: 0.88rem;
@@ -619,13 +609,13 @@ footer {
 
 .footer-formulario input::placeholder,
 .footer-formulario textarea::placeholder {
-    color: rgba(255,255,255,0.45);
+    color: rgba(255, 255, 255, 0.45);
 }
 
 .footer-formulario input:focus,
 .footer-formulario textarea:focus {
     border-color: var(--cor-destaque);
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .footer-formulario textarea {
@@ -656,7 +646,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: 1rem;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     font-size: 0.8rem;
     opacity: 0.6;
     letter-spacing: 0.3px;
@@ -669,12 +659,37 @@ footer {
 @media (max-width: 1024px) {
     .bloco-sobre {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .bloco-sobre-imagem {
         max-width: 100%;
     }
+
+    .bloco-sobre-texto {
+        flex: 1 1 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bloco-sobre-imagem {
+        flex: 1 1 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bloco-sobre-imagem img {
+        height: 300px;
+        width: 450px;
+    }
+
+    .bloco-sobre-texto p {
+        text-align: center;
+    }
+
+
 }
 
 @media (max-width: 768px) {
@@ -705,13 +720,15 @@ footer {
 
     .container-footer {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
     }
 
     .footer-social-icons {
         border: none;
-        border-top: 1px solid rgba(255,255,255,0.1);
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         padding: 1.5rem 0;
     }
 
@@ -723,4 +740,28 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+
+    .bloco-sobre-texto {
+        flex: 1 1 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bloco-sobre-imagem {
+        flex: 1 1 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bloco-sobre-imagem img {
+        height: 300px;
+        width: 450px;
+    }
+
+    .bloco-sobre-texto p {
+        text-align: center;
+    }
 }
+
