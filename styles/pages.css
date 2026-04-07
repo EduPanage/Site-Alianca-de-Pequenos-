@@ -690,12 +690,12 @@ footer {
     }
 
     .footer-localizacao {
-        max-width: 500px;
+        max-width: 100%;
         max-height: 160px;
     }
 
     .footer-social-icons {
-        max-width: 500px;
+        max-width: 100%;
         max-height: 180px;
     }
 }
@@ -770,3 +770,4 @@ footer {
         text-align: center;
     }
 }
+
