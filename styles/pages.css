@@ -689,7 +689,15 @@ footer {
         text-align: center;
     }
 
+    .footer-localizacao {
+        max-width: 500px;
+        max-height: 160px;
+    }
 
+    .footer-social-icons {
+        max-width: 500px;
+        max-height: 180px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -720,9 +728,7 @@ footer {
 
     .container-footer {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
+        text-align: center;
     }
 
     .footer-social-icons {
@@ -764,4 +770,3 @@ footer {
         text-align: center;
     }
 }
-
