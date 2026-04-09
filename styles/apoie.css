@@ -165,8 +165,91 @@ body {
    APRESENTACAO-DOACAO
 ========================= */
 
+.doacao {
+    width: 100%;
+    min-height: 500px;
+    background-color: var(--cor-primaria);
+    background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+}
+
+.doacao-conteiner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    padding: 4rem 15%;
+}
+
+.doacao-conteiner img {
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+
+}
+
+.doacao-apresentacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.doacao-apresentacao-titulo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 200;
+    color: var(--cor-texto-claro);
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.doacao-apresentacao-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 350px; /* força 2 por linha */
+}
 
 
+.doacao-apresentacao-card {
+    width: 120px;
+    height: 60px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    border: var(--cor-destaque) solid 2px;
+    border-radius: var(--radius);
+    background-color: #9E2A2B;
+    transition: 0.3s;
+}
+
+.doacao-apresentacao-card:hover {
+    background-color: #ca5121;
+    transition: 0.3s;
+}
+
+.doacao-apresentacao-card-outro {
+    width: 180px;
+    height: 60px;
+    margin: 0;
+    text-decoration: none;
+    align-content: center;
+    text-align: center;
+    color: var(--cor-texto-claro);
+    border: var(--cor-destaque) solid 2px;
+    border-radius: var(--radius);
+    background-color: #9E2A2B;
+    transition: 0.3s;
+
+}
 
 /* =========================
    DESTINO-DOAÇÃO
