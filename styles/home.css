@@ -658,13 +658,15 @@ footer {
 
     .projeto-imagem img {
         flex-wrap: wrap;
-        height: 200px; 
+        width: 100%;
+        height: 100%; 
 
     }
 }
 
 @media (max-width: 480px){
     .projeto-imagem img {
-        height: 150px; 
+        width: 100%;
+        height: 100%; 
     }
 }
