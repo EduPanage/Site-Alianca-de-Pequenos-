@@ -131,7 +131,7 @@ body {
    HERO - FORJA
 ========================= */
 
-#apresentacao-forja-home{
+#apresentacao-forja-home {
     width: 100%;
     min-height: 500px;
     background:
@@ -146,21 +146,21 @@ body {
     padding: 4rem 15%;
 }
 
-.quero-conhecer-home{
+.quero-conhecer-home {
     display: flex;
     flex-direction: column;
     gap: 15px;
     padding: 0 0 0 7rem;
 }
 
-.quero-conhecer-titulo{
+.quero-conhecer-titulo {
     color: var(--cor-texto-claro);
     font-size: clamp(3rem, 6vw, 4.5rem);
     letter-spacing: 2px;
     font-family: 'Bebas Neue', sans-serif;
 }
 
-.quero-conhecer-texto{
+.quero-conhecer-texto {
     color: var(--cor-texto-claro);
     font-size: 1rem;
     max-width: 500px;
@@ -168,7 +168,7 @@ body {
     opacity: 0.9;
 }
 
-.quero-conhecer-botao{
+.quero-conhecer-botao {
     width: 10rem;
     padding: 12px 10px;
     color: var(--cor-texto-claro);
@@ -183,7 +183,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-.quero-conhecer-botao:hover{
+.quero-conhecer-botao:hover {
     background-color: var(--cor-destaque-hover);
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(158, 42, 43, 0.5);
@@ -193,7 +193,7 @@ body {
    SEÇÃO - ALIANÇA
 ========================= */
 
-#apresentacao-alianca{
+#apresentacao-alianca {
     width: 100%;
     padding: 5rem 6%;
     background-color: var(--cor-primaria);
@@ -205,7 +205,7 @@ body {
     gap: 40px;
 }
 
-.apresentacao-alianca-titulo{
+.apresentacao-alianca-titulo {
     color: var(--cor-texto-claro);
     font-size: clamp(2rem, 4vw, 2.5rem);
     font-family: 'Bebas Neue', sans-serif;
@@ -225,7 +225,7 @@ body {
     background-color: var(--cor-destaque);
 }
 
-.apresentacao-alianca-texto{
+.apresentacao-alianca-texto {
     color: var(--cor-texto-claro);
     text-align: center;
     max-width: 700px;
@@ -238,7 +238,7 @@ body {
     font-weight: 700;
 }
 
-.alianca-cards{
+.alianca-cards {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -246,7 +246,7 @@ body {
     flex-wrap: wrap;
 }
 
-.alianca-card{
+.alianca-card {
     flex: 1 1 280px;
     max-width: 340px;
     background-color: var(--cor-secundaria);
@@ -263,7 +263,7 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
-.alianca-card-imagem{
+.alianca-card-imagem {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -272,14 +272,14 @@ body {
     background: linear-gradient(135deg, #0d2a4a 0%, #1a6a9a 100%);
 }
 
-.alianca-card-subtitulo{
+.alianca-card-subtitulo {
     font-size: 1.2rem;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 1.5px;
     margin: 1rem 1rem 0.5rem;
 }
 
-.alianca-card-texto{
+.alianca-card-texto {
     font-size: 0.88rem;
     line-height: 1.6;
     padding: 0 1.2rem 1.5rem;
@@ -290,6 +290,49 @@ body {
    SEÇÃO - PROJETOS
 ========================= */
 
+#projetos {
+    width: 100%;
+    padding: 2rem 1rem;
+    background-image: url(../imgs/forja/background-escola-forja.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.projetos-imagens {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.projeto-imagem img {
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+}
+
+.projeto-imagem img:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+.projetos-texto {
+    width: 100%;
+    color: var(--cor-texto-claro);
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.projeto-texto-autor {
+    color: var(--cor-texto-escuro);
+    text-align: center;
+    font-size: 1.1rem;
+    text-shadow: #e0e0e0 0px 2px 1px;
+}
 
 /* =========================
    SEÇÃO - PARCEIROS
@@ -318,7 +361,7 @@ body {
     margin: 0 auto 40px auto;
 }
 
-.resultados-titulo{
+.resultados-titulo {
     width: 100%;
     text-align: center;
     font-family: 'Bebas Neue', sans-serif;
@@ -329,7 +372,7 @@ body {
     margin-bottom: 0.7rem;
 }
 
-.resultados-texto{
+.resultados-texto {
     width: 100%;
     text-align: center;
     font-size: 1rem;
@@ -576,7 +619,7 @@ footer {
     }
 }
 
-@media (max-width: 786px){
+@media (max-width: 786px) {
     .header {
         height: auto;
     }
@@ -611,5 +654,17 @@ footer {
 
     .footer-lista {
         justify-content: center;
+    }
+
+    .projeto-imagem img {
+        flex-wrap: wrap;
+        height: 200px; 
+
+    }
+}
+
+@media (max-width: 480px){
+    .projeto-imagem img {
+        height: 150px; 
     }
 }
