@@ -170,6 +170,7 @@ body {
     min-height: 500px;
     background-color: var(--cor-primaria);
     background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 20px 20px;
 }
 
 .doacao-conteiner {
@@ -232,6 +233,7 @@ body {
 }
 
 .doacao-apresentacao-card:hover {
+    border: #ca5121 solid 2px;
     background-color: #ca5121;
     transition: 0.3s;
 }
@@ -251,17 +253,91 @@ body {
 
 }
 
+.doacao-apresentacao-card-outro:hover {
+    border: #ca5121 solid 2px;
+    background-color: #ca5121;
+    transition: 0.3s;
+}
+
 /* =========================
    DESTINO-DOAÇÃO
 ========================= */
 
+.destino{
+    width: 100%;
+    min-height: 500px;
+    background-image: url("../imgs/forja/background-escola-forja.png");
+}
 
+.destino-conteiner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
 
+.destino-apresentacao{
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.destino-apresentacao-titulo{
+    color: var(--cor-texto-claro);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    padding-top: 40px;
+}
+
+.destino-apresentacao-texto{
+    width: 100%;
+    color: var(--cor-texto-claro);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.destino-lista{
+    width: 100%;
+    height: auto;
+    padding-bottom: 2rem;
+}
+
+.destino-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.destino-card{
+
+}
+
+.destino-card img{
+    
+}
+
+.destino-card-subtitulo{
+
+}
+
+.destino-card-texto{
+
+}
 
 
 /* =========================
-   HERO DAS PÁGINAS INTERNAS
+   FUNDO MISSIONARIO
 ========================= */
 
 
@@ -270,9 +346,19 @@ body {
 
 
 /* =========================
-   HERO DAS PÁGINAS INTERNAS
+   ESCOLINHA AGRICULA
 ========================= */
 
+.escolinha {
+    width: 100%;
+    min-height: 500px;
+    
+}
+
+.escolinha-conteiner img {
+    width: 100%;
+    height: auto;
+}
 
 /* =========================
    FOOTER
