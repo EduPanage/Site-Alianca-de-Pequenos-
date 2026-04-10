@@ -167,16 +167,19 @@ body {
 
 .doacao {
     width: 100%;
-    min-height: 500px;
+    padding: 5rem 6%;
     background-color: var(--cor-primaria);
     background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
     background-size: 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .doacao-conteiner {
     max-width: 1200px;
     width: 100%;
-    height: 600px;
+    min-height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -184,14 +187,16 @@ body {
 }
 
 .doacao-conteiner img {
-    flex: 1;
-    width: 100%;
+    flex: 0.7;
     height: 500px;
+    object-fit: cover;
     border-radius: 20px;
 
 }
 
 .doacao-apresentacao {
+    max-width: 500px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -213,16 +218,15 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: center;
-    max-width: 350px;
+    max-width: 260px;
+
     /* força 2 por linha */
 }
 
 
 .doacao-apresentacao-card {
-    width: 120px;
+    flex: 0 0 calc(50% - 5px);
     height: 60px;
-    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -244,8 +248,10 @@ body {
     width: 180px;
     height: 60px;
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
-    align-content: center;
     text-align: center;
     color: var(--cor-texto-claro);
     border: var(--cor-destaque) solid 2px;
@@ -569,6 +575,22 @@ footer {
         gap: 12px 18px;
     }
 
+    .doacao-conteiner {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5rem;
+    }
+
+    .doacao-conteiner img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .escolinha img {
+        width: 100%;
+        height: 250px;
+    }
+
     .container-footer {
         flex-direction: column;
         text-align: center;
@@ -611,5 +633,42 @@ footer {
 
     .bloco-sobre-texto p {
         text-align: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .doacao-conteiner {
+        gap: 20px;
+        padding: 2rem 1rem;
+    }
+
+    .doacao-conteiner img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .doacao-apresentacao-titulo {
+        font-size: 1.8rem;
+    }
+
+    .doacao-apresentacao-cards {
+        max-width: 220px;
+        gap: 8px;
+    }
+
+    .doacao-apresentacao-card {
+        height: 50px;
+        font-size: 0.85rem;
+    }
+
+    .doacao-apresentacao-card-outro {
+        height: 45px;
+        font-size: 0.8rem;
+    }
+
+    .escolinha img{
+        width: 100%;
     }
 }
