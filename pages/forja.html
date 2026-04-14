@@ -270,10 +270,19 @@
 
             <div class="footer-formulario">
                 <h3 class="footer-formulario-titulo">Formulário de Contato</h3>
-                <input type="text" placeholder="Seu nome" required>
-                <input type="email" placeholder="Seu e-mail" required>
-                <textarea placeholder="Sua mensagem" required></textarea>
-                <button type="submit">Enviar Mensagem</button>
+                <form class="form-formulario" action="https://formspree.io/f/xjgjkapr" method="POST">
+                    <label class="footer-label">
+                        <input type="text" name="name" placeholder="Seu nome" required>
+                    </label>
+                    <label class="footer-label">
+                        <input type="email" name="email" placeholder="Seu email" required>
+                    </label>
+                    <label class="footer-label">
+                        <textarea name="message" placeholder="Sua mensagem" required></textarea>
+                    </label>
+                    <!-- your other form fields go here -->
+                    <button type="submit">Enviar Mensagem</button>
+                </form>
             </div>
         </div>
         <p class="copyright">© 2018 Aliança de Pequenos — Política de Privacidade</p>

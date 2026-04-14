@@ -585,6 +585,7 @@ footer {
 }
 
 .container-footer {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     gap: 40px;
@@ -602,8 +603,6 @@ footer {
     gap: 12px;
 }
 
-
-
 .footer-localizacao-titulo,
 .footer-social-icons-titulo,
 .footer-formulario-titulo {
@@ -612,11 +611,10 @@ footer {
     letter-spacing: 1.5px;
     color: var(--cor-destaque);
     margin-bottom: 4px;
-    text-align: center;
 }
 
 .footer-localizacao-texto {
-    font-size: 0.88rem;
+    font-size: 1rem;
     line-height: 1.6;
     opacity: 0.85;
 }
@@ -641,7 +639,6 @@ footer {
     transition: color 0.3s ease, transform 0.3s ease;
     display: block;
     text-decoration: none;
-
 }
 
 .footer-lista a:hover {
@@ -649,10 +646,9 @@ footer {
     transform: translateY(-3px);
 }
 
-/* FORM */
-
-.footer-formulario input,
-.footer-formulario textarea {
+.footer-label input,
+.footer-label textarea {
+    width: 100%;
     padding: 10px 12px;
     border-radius: var(--radius);
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -664,18 +660,29 @@ footer {
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-.footer-formulario input::placeholder,
-.footer-formulario textarea::placeholder {
+.form-formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-label{
+    display: block;
+    width: 100%;
+}
+
+.footer-label input::placeholder,
+.footer-label textarea::placeholder {
     color: rgba(255, 255, 255, 0.45);
 }
 
-.footer-formulario input:focus,
-.footer-formulario textarea:focus {
+.footer-label input:focus,
+.footer-label textarea:focus {
     border-color: var(--cor-destaque);
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-formulario textarea {
+.footer-label textarea {
     min-height: 90px;
     resize: vertical;
 }
@@ -698,8 +705,6 @@ footer {
     background-color: var(--cor-destaque-hover);
     transform: translateY(-1px);
 }
-
-/* COPYRIGHT */
 
 .copyright {
     width: 100%;
@@ -803,19 +808,6 @@ footer {
     .footer-lista {
         justify-content: center;
     }
-
-    .footer-localizacao,
-    .footer-formulario {
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-formulario input,
-    .footer-formulario textarea {
-        width: 100%;
-        max-width: 400px;
-    }
-
 
 }
 
